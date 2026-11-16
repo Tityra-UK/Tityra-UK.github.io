@@ -1,0 +1,15 @@
+Tityra wordmark, bird symbol and hero texture
+Copyright Tityra. Used here for Tityra's official GitHub Pages website.
+Brand assets are not offered under an open-source code licence.
+
+Philosopher Regular
+Copyright 2011 The Philosopher Project Authors.
+Licensed under the SIL Open Font License 1.1.
+See fonts/philosopher/OFL.txt for the complete licence and notices.
+
+Noto Sans Tagalog Regular
+Copyright 2022 The Noto Project Authors.
+Licensed under the SIL Open Font License 1.1.
+See fonts/noto/OFL.txt for the complete licence and notices.
+
+The sharing image is generated from these assets by tools/generate-social-card.py.

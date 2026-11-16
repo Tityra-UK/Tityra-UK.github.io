@@ -1,0 +1,16 @@
+{
+  "name": "Tityra",
+  "title": "Tityra",
+  "url": "https://tityra-uk.github.io",
+  "mainUrl": "https://tityra.com",
+  "githubUrl": "https://github.com/Tityra-UK",
+  "repositoryUrl": "https://github.com/Tityra-UK/Tityra-UK.github.io",
+  "description": "Tityra audits websites and their content to support better Agent Experience (AX).",
+  "image": "/assets/images/social-card.png",
+  "language": "en-GB",
+  "nav": [
+    { "label": "Home", "url": "/" },
+    { "label": "Agent Experience", "url": "/agent-experience/" },
+    { "label": "About", "url": "/about/" }
+  ]
+}

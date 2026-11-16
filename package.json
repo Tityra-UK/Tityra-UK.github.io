@@ -1,0 +1,20 @@
+{
+  "name": "tityra-technical-resources",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Practical, independently useful resources for Agent Experience and website content audits.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "prebuild": "node tools/clean-output.mjs",
+    "build": "eleventy",
+    "predev": "node tools/clean-output.mjs",
+    "dev": "eleventy --serve --port 4178",
+    "test": "node --test",
+    "check": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.8",
+    "linkedom": "0.18.15"
+  }
+}

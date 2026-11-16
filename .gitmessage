@@ -1,0 +1,13 @@
+component: Describe the change
+
+Why:
+
+- Explain the reason for the change.
+
+What:
+
+- Explain the resulting behaviour or content.
+
+# Keep the subject under 50 characters and wrap body text at 72 characters.
+# Use content, ui, seo, docs or ci as the affected component.
+# Link an issue only when there is a real, relevant issue.

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} | {{ brand.title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="robots" content="{% if noindex %}noindex, follow{% else %}index, follow{% endif %}">
+  <meta name="theme-color" content="#17191d">
+  <link rel="canonical" href="{{ page.url | absolute }}">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="/assets/fonts/philosopher/Philosopher-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="/assets/fonts/noto/NotoSansTagalog-Regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="/assets/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ brand.title }}">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:url" content="{{ page.url | absolute }}">
+  <meta property="og:image" content="{{ brand.image | absolute }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Agent readiness guides from Tityra.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ brand.image | absolute }}">
+  {% if not noindex %}<script type="application/ld+json">{{ page.url | structuredData(title, description) | json | safe }}</script>{% endif %}
+</head>
+<body>
+  <a class="skip-link" href="#page-title">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/" aria-label="Tityra home">
+        <img src="/assets/images/tityra-wordmark.svg" width="126" height="46" alt="Tityra">
+        <span class="brand-note">On GitHub</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <ul>{% for item in brand.nav %}
+          <li><a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        {% endfor %}</ul>
+      </nav>
+      <a class="header-cta" href="https://tityra.com/">Visit tityra.com <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+  <main class="site-main">{{ content | safe }}</main>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="/assets/images/tityra-wordmark.svg" width="146" height="53" alt="Tityra" loading="lazy">
+          <p>Tityra audits websites and their content to support better Agent Experience (AX).</p>
+        </div>
+        <nav class="footer-links" aria-label="On this website">
+          <a href="/">Home</a>
+          <a href="/agent-experience/">Agent Experience explained</a>
+          <a href="/about/">About Tityra</a>
+        </nav>
+        <nav class="footer-links" aria-label="Tityra">
+          <a href="https://tityra.com/">Tityra website</a>
+          <a href="https://tityra.com/agent-experience">Agent Experience at Tityra</a>
+          <a href="https://github.com/Tityra-UK">GitHub organisation</a>
+          <a href="https://tityra.com/contact">Contact Tityra</a>
+        </nav>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Tityra. Official GitHub Pages website.</p>
+        <p><a href="{{ brand.repositoryUrl }}">Source on GitHub</a> · <a href="/sitemap.xml">Sitemap</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
